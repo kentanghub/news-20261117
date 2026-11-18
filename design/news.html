@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1024px; height: 1024px; overflow: hidden; }
+  body {
+    font-family: 'Liberation Serif', Georgia, 'Times New Roman', serif;
+    background: #f6f1e6;
+    color: #17140e;
+  }
+  .page { width: 1024px; height: 1024px; padding: 20px 28px 14px; display: flex; flex-direction: column; }
+
+  /* ── Masthead ─────────────────────────────────────── */
+  .mast { border-bottom: 4px solid #17140e; padding-bottom: 8px; }
+  .kicker-row { display: flex; justify-content: space-between; align-items: baseline;
+    font-family: 'Liberation Sans', Arial, sans-serif; font-size: 14px; letter-spacing: 2.5px;
+    color: #5c5443; text-transform: uppercase; margin-bottom: 4px; }
+  .kicker-row b { color: #b3241f; }
+  .title-row { display: flex; justify-content: space-between; align-items: flex-end; }
+  h1 { font-size: 50px; line-height: 1; letter-spacing: 0.5px; font-weight: 700; }
+  .dateline { text-align: right; }
+  .dateline .d1 { font-size: 37px; font-weight: 700; color: #b3241f; line-height: 1; }
+  .dateline .d2 { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 13.5px; letter-spacing: 2px; color: #5c5443; text-transform: uppercase; margin-top: 3px; }
+
+  /* ── Grid of stories ──────────────────────────────── */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 16px; margin-top: 10px; flex: 1; align-content: start; }
+  .story { border-top: 2.5px solid #17140e; padding-top: 5px; display: flex; gap: 11px; align-items: flex-start; }
+  .story.wide { grid-column: 1 / -1; }
+  .ico { flex: 0 0 62px; height: 62px; border-radius: 9px; display: flex; align-items: center; justify-content: center; }
+  .txt { flex: 1; min-width: 0; }
+  .tag { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 12.5px; font-weight: 700;
+    letter-spacing: 1.6px; text-transform: uppercase; color: #b3241f; }
+  .tag .sep { color: #8d8471; font-weight: 400; }
+  h2 { font-size: 24.5px; line-height: 1.06; margin: 2px 0 3px; font-weight: 700; }
+  .body { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 15.5px; line-height: 1.28; color: #37322a; }
+  .body b { color: #17140e; }
+
+  /* ── Ticker + footer ──────────────────────────────── */
+  .also { border-top: 2.5px solid #17140e; margin-top: 10px; padding-top: 6px; }
+  .also .label { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 12.5px; font-weight: 700;
+    letter-spacing: 2px; color: #b3241f; text-transform: uppercase; margin-bottom: 4px; }
+  .also .items { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 15px; line-height: 1.4; color: #37322a; }
+  .also .items b { color: #17140e; }
+  .foot { display: flex; justify-content: space-between; margin-top: 7px; padding-top: 6px;
+    border-top: 1.5px solid #b9b09b; font-family: 'Liberation Sans', Arial, sans-serif;
+    font-size: 12px; letter-spacing: 1px; color: #8d8471; text-transform: uppercase; }
+
+  .red   { background: #f6d9d3; }
+  .blue  { background: #d7e2f4; }
+  .green { background: #dbe8d4; }
+  .gold  { background: #f3e6c6; }
+  .grey  { background: #e4e0d4; }
+  .violet{ background: #e2dcee; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="mast">
+    <div class="kicker-row">
+      <span>One day &middot; One image</span>
+      <span><b>&numero;&nbsp;321</b> &middot; 44 days left in 2026 &middot; world edition</span>
+    </div>
+    <div class="title-row">
+      <h1>THE DAY IN THE WORLD</h1>
+      <div class="dateline">
+        <div class="d1">17 NOV 2026</div>
+        <div class="d2">Tuesday &middot; as reported by the wires</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="story">
+      <div class="ico gold">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><circle cx="14" cy="16" r="7" fill="#f0b429"/><circle cx="40" cy="16" r="7" fill="#d7e2f4"/><circle cx="27" cy="34" r="7" fill="#f6d9d3"/><path d="M20 20 L24 27 M34 20 L30 27 M20 37 L34 37" stroke-width="2.2"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">Shenzhen <span class="sep">/</span> diplomacy</div>
+        <h2>Trump, Xi and Putin meet as a trio</h2>
+        <div class="body"><b>An unprecedented three-way summit</b> opens at APEC in China; Trump, greeted by both hosts on arrival, sits with Putin on Thursday, Mexico and Canada on the sidelines.</div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="ico red">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><path d="M27 46 L27 22" /><path d="M27 22 L20 8 L27 14 L34 8 Z" fill="#d64a41"/><circle cx="14" cy="44" r="4" fill="#d64a41"/><circle cx="40" cy="44" r="4" fill="#d64a41"/><path d="M8 44 L20 44 M34 44 L46 44"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">Iran war <span class="sep">/</span> third exchange in five days</div>
+        <h2>US bombs Qeshm; Iran fires on Gulf bases</h2>
+        <div class="body"><b>Six US strikes</b> hit Iran's Qeshm Island; Tehran answers with drones on Bahrain and Kuwait, breaking a two-month lull in the war.</div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="ico blue">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><path d="M4 30 L18 30 M36 26 L50 26" /><path d="M14 30 Q27 12 40 26" /><path d="M24 21 L30 38" stroke-dasharray="3 3"/><path d="M18 40 Q27 46 36 38" stroke="#3c6cb4"/><path d="M10 42 L16 48 M38 34 L44 40" stroke="#3c6cb4" stroke-width="2"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">Crimea <span class="sep">/</span> second day of strikes</div>
+        <h2>Kerch Bridge span collapses into the strait</h2>
+        <div class="body"><b>Ukrainian drones strike the bridge again</b>; two people die and a damaged road section drops into the Kerch Strait, closing traffic once more.</div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="ico green">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><rect x="6" y="8" width="42" height="38" rx="3"/><path d="M12 34 L21 24 L28 29 L41 15" stroke="#b3241f"/><path d="M41 15 L41 24 M41 15 L33 15" stroke="#b3241f"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">Global markets <span class="sep">/</span> fourth day of losses</div>
+        <h2>Chip curbs and Nvidia crisis sink stocks</h2>
+        <div class="body"><b>New US licences for AI-chip exports</b> to five countries' data centres; Kospi slips under 5,000; <b>Nvidia sheds $735bn</b> with CEO Huang out and earnings due tonight.</div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="ico violet">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><rect x="7" y="38" width="40" height="8" rx="2"/><path d="M14 38 L14 24 A6 6 0 0 1 26 24 L26 38 M30 38 L30 20 A6 6 0 0 1 42 20 L42 38"/><path d="M20 10 L20 14 M36 8 L36 12" stroke-width="2.2"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">United States <span class="sep">/</span> infrastructure</div>
+        <h2>A week of outages rattles the system</h2>
+        <div class="body"><b>The NSA joins the list</b> after the FAA's nationwide ground stop, 800 grounded United flights and big-bank blackouts; officials call the incidents unrelated.</div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="ico blue">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><rect x="10" y="14" width="34" height="26" rx="2" fill="#d7e2f4"/><path d="M16 22 L38 22 M16 28 L34 28 M16 34 L30 34" stroke-width="2.2"/><path d="M8 44 L46 44" stroke-width="2.2"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">London <span class="sep">/</span> sanctions</div>
+        <h2>UK targets eight settlement-builders</h2>
+        <div class="body"><b>Britain sanctions eight companies</b> building Israeli settlements in the occupied West Bank, the foreign secretary announced in London.</div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="ico red">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><path d="M8 44 L46 44" /><path d="M12 44 L12 26 L24 26 L24 44 M30 44 L30 18 L42 18 L42 44" fill="#f6d9d3"/><path d="M6 22 L27 6 L48 22" fill="#f6d9d3"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">Bangladesh <span class="sep">/</span> labour</div>
+        <h2>Garment workers shut 37 factories</h2>
+        <div class="body"><b>Highways blocked, tear gas fired</b> as workers strike for a minimum wage rise from $100 to $240 a month; the wage board's answer was another delay, to Nov 23.</div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="ico green">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><path d="M27 12 L27 44" /><path d="M27 20 L14 27 M27 20 L40 27" /><circle cx="14" cy="27" r="5" fill="#dbe8d4"/><circle cx="40" cy="27" r="5" fill="#dbe8d4"/><circle cx="27" cy="44" r="5" fill="#d64a41"/><path d="M20 8 Q27 2 34 8" stroke-width="2"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">Americas <span class="sep">/</span> public health</div>
+        <h2>Measles comeback strips three nations</h2>
+        <div class="body"><b>The US, Mexico and Bolivia lose measles-free status</b> as the Pan American Health Organization cites 5,700 US cases, deaths, and a year of unbroken spread.</div>
+      </div>
+    </div>
+
+    <div class="story wide">
+      <div class="ico blue">
+        <svg width="46" height="46" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><circle cx="20" cy="27" r="12" fill="#d7e2f4"/><path d="M32 20 L44 14 M32 34 L44 40 M36 27 L48 27" stroke="#b3241f"/><path d="M8 18 L12 22 M8 36 L12 32" stroke-width="2"/></g></svg>
+      </div>
+      <div class="txt">
+        <div class="tag">Deep space <span class="sep">/</span> nearly 50 years out</div>
+        <h2>Voyager 1 reaches one light-day from Earth</h2>
+        <div class="body"><b>More than 16 billion miles out</b>, the 1977 probe crosses a milestone no spacecraft has &mdash; and tonight NASA asks the world to flash golden light in its honour.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="also">
+    <div class="label">Also today</div>
+    <div class="items"><b>Macron in Kuala Lumpur:</b> defence and rare-earths pact &middot; <b>Siberia:</b> An-12 crash kills all 17 aboard &middot; <b>Gaza:</b> storms flood displaced families' tents &middot; <b>Carney and Xi cut tariffs</b> &middot; <b>Washington:</b> FDA pick withdrawn, Biden memoir out</div>
+  </div>
+
+  <div class="foot">
+    <span>Sources: Reuters &middot; AFP &middot; Le Monde &middot; Bloomberg &middot; PBS &middot; France 24</span>
+    <span>Every event first reported 17 Nov 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
